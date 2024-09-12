@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "{{postmanId}}",
+		"name": "OpenWeather_API_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "{{exporterId}}"
+	},
+	"item": [
+		{
+			"name": "Fetch Weather by City and State",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{global_baseurl}}/weather?q=hyderabad&appid={{global_api_key}}",
+					"host": [
+						"{{global_baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "hyderabad"
+						},
+						{
+							"key": "appid",
+							"value": "{{global_api_key}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch Weather by City and State",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{global_baseurl}}/weather?q=hyderabad&appid={{global_api_key}}",
+							"host": [
+								"{{global_baseurl}}"
+							],
+							"path": [
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "hyderabad"
+								},
+								{
+									"key": "appid",
+									"value": "{{global_api_key}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "openresty"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Sep 2024 18:45:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "499"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Cache-Key",
+							"value": "/data/2.5/weather?q=hyderabad"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"coord\": {\n        \"lon\": 78.4744,\n        \"lat\": 17.3753\n    },\n    \"weather\": [\n        {\n            \"id\": 701,\n            \"main\": \"Mist\",\n            \"description\": \"mist\",\n            \"icon\": \"50n\"\n        }\n    ],\n    \"base\": \"stations\",\n    \"main\": {\n        \"temp\": 297.88,\n        \"feels_like\": 298.71,\n        \"temp_min\": 297.88,\n        \"temp_max\": 297.88,\n        \"pressure\": 1003,\n        \"humidity\": 88,\n        \"sea_level\": 1003,\n        \"grnd_level\": 940\n    },\n    \"visibility\": 4000,\n    \"wind\": {\n        \"speed\": 4.12,\n        \"deg\": 270\n    },\n    \"clouds\": {\n        \"all\": 75\n    },\n    \"dt\": 1725907518,\n    \"sys\": {\n        \"type\": 1,\n        \"id\": 9213,\n        \"country\": \"IN\",\n        \"sunrise\": 1725928419,\n        \"sunset\": 1725972769\n    },\n    \"timezone\": 19800,\n    \"id\": 1269843,\n    \"name\": \"Hyderabad\",\n    \"cod\": 200\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "global_baseurl",
+			"value": "https://api.openweathermap.org/data/2.5",
+			"type": "string"
+		},
+		{
+			"key": "global_api_key",
+			"value": "{{api_key}}",
+			"type": "string"
+		}
+	]
+}
